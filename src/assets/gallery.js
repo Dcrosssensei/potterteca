@@ -8,6 +8,10 @@ import r from "./raw.png";
 import g from "./gry.png";
 import s from "./snp.png";
 
+import book from "./book.jpg";
+import character from "./chart.jpg";
+import spell from "./spell.jpg";
+
 export const imgHouse = {
   ravenclaw: rav,
   griffindor: gri,
@@ -20,4 +24,10 @@ export const mascot = {
   griffindor: g,
   slytherin: s,
   hufflepuff: h,
+};
+
+export const icons = {
+  book: book,
+  character: character,
+  spell: spell,
 };

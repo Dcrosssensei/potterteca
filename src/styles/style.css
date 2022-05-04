@@ -8,6 +8,8 @@
 .home {
   grid-column-start: 1;
   grid-column-end: 13;
+  position: relative;
+  top: 150px;
 }
 
 .header {
@@ -46,6 +48,46 @@
   top: 5px;
 }
 
+.MenuCard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.MenuCard div {
+  flex: 1;
+}
+
+.MenuCard__Card {
+  border-radius: 25px;
+  position: relative;
+  align-items: center;
+}
+.MenuCard__Card img {
+  width: 100%;
+  border-radius: 25px;
+  filter: grayscale(0.5);
+}
+.MenuCard__Card img:hover {
+  filter: grayscale(0);
+}
+.MenuCard__Card h1 {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.MenuCard__Card h1:hover {
+  opacity: 0.5;
+}
+.MenuCard__Card h1:hover .MenuCard {
+  filter: grayscale(1);
+}
+.Card__Container {
+  border-radius: 25px;
+  width: 100%;
+}
+
 @media only screen and (max-width: 1024px) {
   [class=Layout] {
     grid-template-columns: repeat(8, 1fr);
@@ -62,6 +104,10 @@
   [class=Layout] {
     grid-template-columns: repeat(4, 1fr);
     margin: 0;
+  }
+
+  [class=MenuCard] {
+    flex-direction: column;
   }
 }
 
