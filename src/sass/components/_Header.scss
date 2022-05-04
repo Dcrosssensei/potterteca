@@ -1,0 +1,40 @@
+.header {
+  height: 50px;
+  font-family: "Bilbo Swash Caps", cursive;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
+}
+
+.header__container1 {
+  display: flex;
+  flex: 1;
+  h1 {
+    position: relative;
+    left: 10vw;
+  }
+  img {
+    position: relative;
+    left: 8vw;
+    height: 50px;
+    object-fit: cover;
+  }
+}
+
+.header__container2 {
+  //   grid-column-start: 2;
+  //   grid-column-end: 3;
+  //   display: grid;
+  //   grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex: 2;
+  justify-content: flex-end;
+  img {
+    position: relative;
+    width: 100px;
+    // object-fit: cover;
+    &:hover {
+      cursor: pointer;
+      top: 5px;
+    }
+  }
+}

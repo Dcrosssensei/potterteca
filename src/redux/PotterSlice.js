@@ -1,28 +1,37 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { mascot } from "../assets/gallery";
 
 export const PotterSlice = createSlice({
   name: "reduxPotter",
   initialState: {
-    house: "ravenclaw",
+    house: "Gryffindor",
+    mascot: mascot.griffindor,
   },
   reducers: {
-    GRIFFINDOR: (state) => {
-      state.house = "griffindor";
+    GRYFFINDOR: (state) => {
+      state.house = "Gryffindor";
+      state.mascot = mascot.griffindor;
     },
     SLYTHERYN: (state) => {
-      state.house = "slytherin";
+      state.house = "Slytherin";
+      state.mascot = mascot.slytherin;
     },
-    RAVENCLAW: (state, action) => {
-      state.house = "ravenclaw";
+    RAVENCLAW: (state) => {
+      state.house = "Ravenclaw";
+      state.mascot = mascot.ravenclaw;
     },
-    HUFFLEPUFF: (state, action) => {
-      state.house = "hufflepuff";
+    HUFFLEPUFF: (state) => {
+      state.house = "Hufflepuff";
+      state.mascot = mascot.hufflepuff;
     },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { GRIFFINDOR, SLYTHERYN, RAVENCLAW, HUFFLEPUFF } =
+export const { GRYFFINDOR, SLYTHERYN, RAVENCLAW, HUFFLEPUFF } =
   PotterSlice.actions;
+
+export const selectHouse = (state) => state.reduxPotter.house;
+export const selectMascot = (state) => state.reduxPotter.mascot;
 
 export default PotterSlice.reducer;

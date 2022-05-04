@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&display=swap");
 .Layout {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -7,6 +8,42 @@
 .home {
   grid-column-start: 1;
   grid-column-end: 13;
+}
+
+.header {
+  height: 50px;
+  font-family: "Bilbo Swash Caps", cursive;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
+}
+
+.header__container1 {
+  display: flex;
+  flex: 1;
+}
+.header__container1 h1 {
+  position: relative;
+  left: 10vw;
+}
+.header__container1 img {
+  position: relative;
+  left: 8vw;
+  height: 50px;
+  object-fit: cover;
+}
+
+.header__container2 {
+  display: flex;
+  flex: 2;
+  justify-content: flex-end;
+}
+.header__container2 img {
+  position: relative;
+  width: 100px;
+}
+.header__container2 img:hover {
+  cursor: pointer;
+  top: 5px;
 }
 
 @media only screen and (max-width: 1024px) {

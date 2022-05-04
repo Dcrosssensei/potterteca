@@ -1,6 +1,8 @@
 @import "vars";
 @import "./components/components.scss";
 
+@import url("https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&display=swap");
+
 //portatil-peq
 @media only screen and (max-width: 1024px) {
   [class="Layout"] {

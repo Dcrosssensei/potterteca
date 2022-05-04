@@ -2,20 +2,32 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./ComponentStiled/GlobalStyle";
 
 const house = {
-  griffindor: {
-    color: "red",
+  Gryffindor: {
+    house: "Gryffindor",
+    color: "white",
+    colorbg1: "#600808",
+    colorbg2: "#9b091e",
     bg: "griffindor",
   },
-  slytherin: {
-    color: "green",
+  Slytherin: {
+    house: "Slytherin",
+    color: "white",
+    colorbg1: "#093a1b",
+    colorbg2: "#018345",
     bg: "slytherin",
   },
-  hufflepuff: {
-    color: "yellow",
+  Hufflepuff: {
+    house: "Hufflepuff",
+    color: "black",
+    colorbg1: "#edae01",
+    colorbg2: "#28292e",
     bg: "hufflepuff",
   },
-  ravenclaw: {
-    color: "blue",
+  Ravenclaw: {
+    house: "Ravenclaw",
+    color: "white",
+    colorbg1: "#083c61",
+    colorbg2: "#1371b1",
     bg: "ravenclaw",
   },
 };
