@@ -8,5 +8,6 @@ body{
     box-sizing: border-box;
     margin:0;
     background: #080808;
+    
 }
 `;

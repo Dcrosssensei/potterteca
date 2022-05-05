@@ -14,7 +14,7 @@
   align-items: center;
   img {
     width: 100%;
-    border-radius: 25px;
+    border-radius: 20px;
     filter: grayscale(0.5);
     &:hover {
       filter: grayscale(0);
@@ -25,18 +25,16 @@
     top: 50%;
     width: 100%;
     text-align: center;
-    background-color: rgb(255, 255, 255, 0.6);
-    &:hover {
-      opacity: 0.5;
-      .MenuCard {
-        filter: grayscale(1);
-      }
-    }
+    background-color: rgb(255, 255, 255, 0.8);
+    object-fit: cover;
+    transition: 2s;
   }
   &:hover {
-    // h1 {
-    //   opacity: 0;
-    // }
+    cursor: pointer;
+    h1 {
+      display: none;
+      transition: 2s;
+    }
   }
 }
 

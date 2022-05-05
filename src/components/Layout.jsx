@@ -21,5 +21,11 @@ export const Layout = ({ children }) => {
     }
   });
 
-  return <div className="Layout">{children}</div>;
+  return (
+    <div className="Layout">
+      <h1 className="title-name"> Potterteca </h1>
+
+      {children}
+    </div>
+  );
 };

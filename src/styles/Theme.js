@@ -4,14 +4,14 @@ import { GlobalStyle } from "./ComponentStiled/GlobalStyle";
 const house = {
   Gryffindor: {
     house: "Gryffindor",
-    color: "white",
+    color: "rgb(240, 240, 240)",
     colorbg1: "#600808",
     colorbg2: "#9b091e",
     bg: "griffindor",
   },
   Slytherin: {
     house: "Slytherin",
-    color: "white",
+    color: "rgb(240, 240, 240)",
     colorbg1: "#093a1b",
     colorbg2: "#018345",
     bg: "slytherin",
@@ -25,13 +25,12 @@ const house = {
   },
   Ravenclaw: {
     house: "Ravenclaw",
-    color: "white",
+    color: "rgb(240, 240, 240)",
     colorbg1: "#083c61",
     colorbg2: "#1371b1",
     bg: "ravenclaw",
   },
 };
-
 export const HouseTheme = (props) => (
   <ThemeProvider theme={house[props.house]}>
     <GlobalStyle />

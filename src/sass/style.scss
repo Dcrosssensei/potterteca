@@ -9,6 +9,9 @@
     grid-template-columns: repeat(8, 1fr);
     margin: 0 3%;
   }
+  [class="Character"] {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 //tablet
@@ -17,6 +20,9 @@
     grid-template-columns: repeat(8, 1fr);
     margin: 0 3%;
   }
+  [class="Character"] {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 //mobile
@@ -24,6 +30,9 @@
   [class="Layout"] {
     grid-template-columns: repeat(4, 1fr);
     margin: 0;
+  }
+  [class="Character"] {
+    grid-template-columns: auto;
   }
 
   [class="MenuCard"] {
