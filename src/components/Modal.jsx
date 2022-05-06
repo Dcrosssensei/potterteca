@@ -12,9 +12,7 @@ const Modal = () => {
   useEffect(() => {
     if (displayModal === 1) {
       modal.current.style.display = "flex";
-      console.log("flex");
     }
-    console.log("effect");
   }, [displayModal]);
 
   const displayoff = () => {
@@ -25,15 +23,27 @@ const Modal = () => {
   return (
     <div className="modal" ref={modal}>
       <div className="details">
+        <button onClick={() => displayoff()}></button>
         <img src={modelData.imagen} alt={modelData.personaje} />
-        Nombre: {modelData.personaje}
-        Casa de Hogwarts: {modelData.casaDeHogwarts}
-        Hijos: {modelData.hijos}
-        {modelData.hijos.forEach((el) => {
-          <p>{el}</p>;
-        })}
+        <section>
+          <div>
+            <h2> Nombre:</h2>
+            <h3> {modelData.personaje}</h3>
+          </div>
+          <div>
+            <h2> Casa de Hogwarts:</h2>
+            <h3>{modelData.casaDeHogwarts}</h3>
+          </div>
+          <div>
+            <h2>Hijos:</h2>
+            <div>
+              {modelData.hijos?.map((el) => (
+                <h3 key={el}>{el} </h3>
+              ))}
+            </div>
+          </div>
+        </section>
       </div>
-      <button onClick={() => displayoff()}> x</button>
     </div>
   );
 };

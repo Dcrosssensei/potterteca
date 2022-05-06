@@ -23,7 +23,7 @@ const Characters = () => {
       <div className="Character">
         {data.map((x, index) => (
           <InfoChart className="Character__Info" key={index}>
-            <div className="Info__Text">
+            <div>
               <h1>{x.personaje}</h1>
               <h3>{x.casaDeHogwarts}</h3>
               <button

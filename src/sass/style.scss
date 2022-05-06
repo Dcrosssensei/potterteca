@@ -38,4 +38,13 @@
   [class="MenuCard"] {
     flex-direction: column;
   }
+  [class="details"] {
+    grid-template-columns: auto;
+  }
+  [class*="Book__Item"] {
+    flex-wrap: wrap;
+  }
+  [class*="spell__Item"] {
+    flex-wrap: wrap;
+  }
 }
