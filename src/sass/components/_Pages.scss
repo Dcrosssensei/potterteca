@@ -8,25 +8,26 @@
   z-index: 1;
 }
 
+.Character__Page {
+  grid-column-start: 1;
+  grid-column-end: 13;
+}
+
 .Character {
+  position: relative;
+  top: 150px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   text-align: center;
-  gap: 10px;
+  gap: 30px;
   img {
     width: 100px;
     object-fit: cover;
     position: relative;
   }
-  button {
-    border: none;
-    padding: 5px;
-    margin: 5px 0;
-    width: 50%;
-    border-radius: 25px;
-    &:hover {
-      cursor: pointer;
-    }
+
+  &:hover {
+    cursor: pointer;
   }
 }
 
@@ -34,36 +35,6 @@
   display: flex;
   div {
     flex: 1;
-  }
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  z-index: 200;
-  background-color: rgba(0, 0, 0, 0.829);
-  align-items: center;
-  justify-content: center;
-
-  button {
-    position: absolute;
-    right: 10px;
-    top: 5px;
-    border-radius: 50%;
-    width: 25px;
-    height: 25px;
-    border: none;
-    background-color: #5e181865;
-    color: #fff;
-    &:hover {
-      background-color: #9b091fd7;
-    }
-    &::before {
-      content: "X";
-    }
   }
 }
 
@@ -107,9 +78,15 @@
 }
 
 .Book {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  position: relative;
+  top: 150px;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 30px;
 }
 
 .Book__Item {
@@ -132,25 +109,19 @@
 }
 
 .Spell {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: auto;
+  grid-column-start: 1;
+  grid-column-end: 12;
+  position: relative;
+  top: 150px;
+  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
-.spell__Item {
-  display: flex;
-  width: -webkit-fill-available;
-  align-items: center;
-  justify-content: center;
-  img {
-    width: 100px;
-  }
-}
-.Spell__Item__Text {
-  width: -webkit-fill-available;
+
+.spell__Item__Text {
+  border-radius: 10px;
   padding: 10px;
-  display: flex;
-  flex-direction: column;
+
   h1 {
     margin: 10px 0;
   }

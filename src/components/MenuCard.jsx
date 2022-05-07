@@ -1,25 +1,32 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { icons } from "../assets/gallery";
 import { Cards } from "../styles/ComponentStiled/Card";
-// import { Title } from "../styles/ComponentStiled/Title";
-import { TitleColor } from "../styles/ComponentStiled/TitleColor";
 
 const MenuCard = () => {
   return (
     <div className="MenuCard">
-      <Cards className="MenuCard__Card">
-        <img className="" src={icons.character} alt="Personajes" />
-        <TitleColor> Personajes </TitleColor>
-      </Cards>
-
-      <Cards className="MenuCard__Card">
-        <img className="" src={icons.book} alt="Libros" />
-        <TitleColor> Libros </TitleColor>
-      </Cards>
-      <Cards className="MenuCard__Card">
-        <img className="" src={icons.spell} alt="Hechizos" />
-        <TitleColor> Hechizos </TitleColor>
-      </Cards>
+      <Link to="/characters" className="--links">
+        <div className="MenuCard__Card">
+          <Cards className="loadMenu" />
+          <img className="" src={icons.character} alt="Personajes" />
+          <h1> Personajes </h1>
+        </div>
+      </Link>
+      <Link to="/books" className="--links">
+        <div className="MenuCard__Card">
+          <Cards className="loadMenu" />
+          <img className="" src={icons.book} alt="Libros" />
+          <h1> Libros </h1>
+        </div>
+      </Link>
+      <Link to="/spells" className="--links">
+        <div className="MenuCard__Card">
+          <Cards className="loadMenu" />
+          <img className="" src={icons.spell} alt="Hechizos" />
+          <h1> Hechizos </h1>
+        </div>
+      </Link>
     </div>
   );
 };

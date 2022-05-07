@@ -16,43 +16,6 @@
   left: 8%;
 }
 
-.home {
-  grid-column-start: 1;
-  grid-column-end: 13;
-  position: relative;
-  top: 150px;
-  z-index: 1;
-}
-
-.Character {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  text-align: center;
-  gap: 10px;
-}
-.Character img {
-  width: 100px;
-  object-fit: cover;
-  position: relative;
-}
-.Character button {
-  border: none;
-  padding: 5px;
-  margin: 5px 0;
-  width: 50%;
-  border-radius: 25px;
-}
-.Character button:hover {
-  cursor: pointer;
-}
-
-.Character__Info {
-  display: flex;
-}
-.Character__Info div {
-  flex: 1;
-}
-
 .modal {
   display: none;
   position: fixed;
@@ -80,6 +43,43 @@
 }
 .modal button::before {
   content: "X";
+}
+
+.home {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  position: relative;
+  top: 150px;
+  z-index: 1;
+}
+
+.Character__Page {
+  grid-column-start: 1;
+  grid-column-end: 13;
+}
+
+.Character {
+  position: relative;
+  top: 150px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  gap: 30px;
+}
+.Character img {
+  width: 100px;
+  object-fit: cover;
+  position: relative;
+}
+.Character:hover {
+  cursor: pointer;
+}
+
+.Character__Info {
+  display: flex;
+}
+.Character__Info div {
+  flex: 1;
 }
 
 .details {
@@ -120,9 +120,14 @@
 }
 
 .Book {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  position: relative;
+  top: 150px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 30px;
 }
 
 .Book__Item {
@@ -143,32 +148,23 @@
 }
 
 .Spell {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: auto;
+  grid-column-start: 1;
+  grid-column-end: 12;
+  position: relative;
+  top: 150px;
+  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.spell__Item {
-  display: flex;
-  width: -webkit-fill-available;
-  align-items: center;
-  justify-content: center;
-}
-.spell__Item img {
-  width: 100px;
-}
-
-.Spell__Item__Text {
-  width: -webkit-fill-available;
+.spell__Item__Text {
+  border-radius: 10px;
   padding: 10px;
-  display: flex;
-  flex-direction: column;
 }
-.Spell__Item__Text h1 {
+.spell__Item__Text h1 {
   margin: 10px 0;
 }
-.Spell__Item__Text p {
+.spell__Item__Text p {
   margin: 0%;
   display: block;
   font-size: 25px;
@@ -215,47 +211,65 @@
 }
 
 .MenuCard {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-}
-.MenuCard div {
-  flex: 1;
+  gap: 100px;
+  display: grid;
+  grid-template-rows: auto;
 }
 
 .MenuCard__Card {
-  border-radius: 25px;
   position: relative;
+  width: 100%;
+  display: flex;
   align-items: center;
 }
 .MenuCard__Card img {
-  width: 100%;
+  position: relative;
+  width: 200px;
+  height: -webkit-fill-available;
+  object-fit: cover;
   border-radius: 20px;
   filter: grayscale(0.5);
-}
-.MenuCard__Card img:hover {
-  filter: grayscale(0);
+  display: flex;
 }
 .MenuCard__Card h1 {
-  position: absolute;
-  top: 50%;
-  width: 100%;
+  position: relative;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.8);
-  object-fit: cover;
-  transition: 2s;
+  font-size: 45px;
+  left: 20px;
+  color: white;
 }
 .MenuCard__Card:hover {
   cursor: pointer;
 }
-.MenuCard__Card:hover h1 {
-  display: none;
+.MenuCard__Card:hover img {
   transition: 2s;
+}
+.MenuCard__Card:hover .loadMenu {
+  width: 50%;
+  height: 130px;
+  position: absolute;
+  transition: 1s;
+}
+.MenuCard__Card:hover h1 {
+  transition: 1s;
+  color: white;
+}
+
+.loadMenu {
+  width: 100px;
+  border-radius: 25px;
+  position: absolute;
+  left: 0;
+  transition: 1s;
 }
 
 .Card__Container {
   border-radius: 25px;
   width: 100%;
+}
+
+.--links {
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -277,11 +291,19 @@
   [class=Character] {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  [class=Spell] {
+    grid-template-columns: auto;
+  }
 }
 @media only screen and (max-width: 425px) {
   [class=Layout] {
     grid-template-columns: repeat(4, 1fr);
     margin: 0;
+  }
+
+  [class=header__container2] {
+    display: none;
   }
 
   [class=Character] {
@@ -290,6 +312,21 @@
 
   [class=MenuCard] {
     flex-direction: column;
+  }
+
+  [class=MenuCard__Card] {
+    flex-direction: column;
+  }
+  [class=MenuCard__Card]:hover {
+    box-shadow: 0px 0px 5px black;
+  }
+  [class=MenuCard__Card]:hover .loadMenu {
+    width: 50%;
+    left: 25%;
+    top: 68%;
+    height: 45px;
+    position: absolute;
+    transition: 1s;
   }
 
   [class=details] {

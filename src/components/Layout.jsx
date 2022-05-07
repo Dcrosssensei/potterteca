@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 
 import { apiPotter } from "../services/serviceApi";
+import { TitleColor } from "../styles/ComponentStiled/TitleColor";
 
 import { useDispatch, useSelector } from "react-redux";
 import { SPELL, INFO, CHARACTER, BOOK, selectSpell } from "../redux/dataSlice";
@@ -23,7 +24,7 @@ export const Layout = ({ children }) => {
 
   return (
     <div className="Layout">
-      <h1 className="title-name"> Potterteca </h1>
+      <TitleColor className="title-name"> Potterteca </TitleColor>
 
       {children}
     </div>

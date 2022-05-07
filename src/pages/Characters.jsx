@@ -22,17 +22,16 @@ const Characters = () => {
     <div className="Character__Page">
       <div className="Character">
         {data.map((x, index) => (
-          <InfoChart className="Character__Info" key={index}>
+          <InfoChart
+            className="Character__Info"
+            key={index}
+            onClick={() => {
+              Info(x.id);
+            }}
+          >
             <div>
               <h1>{x.personaje}</h1>
               <h3>{x.casaDeHogwarts}</h3>
-              <button
-                onClick={() => {
-                  Info(x.id);
-                }}
-              >
-                Detalles
-              </button>
             </div>
             <img src={x.imagen} alt={x.personaje} />
           </InfoChart>

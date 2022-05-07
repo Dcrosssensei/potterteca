@@ -1,44 +1,68 @@
 .MenuCard {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-
-  div {
-    flex: 1;
-  }
+  // display: flex;
+  // flex-wrap: wrap;
+  gap: 100px;
+  display: grid;
+  grid-template-rows: auto;
 }
 
 .MenuCard__Card {
-  border-radius: 25px;
   position: relative;
+  width: 100%;
+  display: flex;
   align-items: center;
+
   img {
-    width: 100%;
+    position: relative;
+    width: 200px;
+    height: -webkit-fill-available;
+    object-fit: cover;
     border-radius: 20px;
     filter: grayscale(0.5);
-    &:hover {
-      filter: grayscale(0);
-    }
+    display: flex;
   }
   h1 {
-    position: absolute;
-    top: 50%;
-    width: 100%;
+    position: relative;
     text-align: center;
-    background-color: rgb(255, 255, 255, 0.8);
-    object-fit: cover;
-    transition: 2s;
+    font-size: 45px;
+    left: 20px;
+    color: white;
   }
   &:hover {
     cursor: pointer;
-    h1 {
-      display: none;
+
+    img {
       transition: 2s;
     }
+
+    .loadMenu {
+      width: 50%;
+      height: 130px;
+      position: absolute;
+      transition: 1s;
+    }
+
+    h1 {
+      transition: 1s;
+      color: white;
+    }
   }
+}
+
+.loadMenu {
+  width: 100px;
+  // height: 130px;
+  border-radius: 25px;
+  position: absolute;
+  left: 0;
+  transition: 1s;
 }
 
 .Card__Container {
   border-radius: 25px;
   width: 100%;
+}
+
+.--links {
+  text-decoration: none;
 }

@@ -7,7 +7,7 @@ body{
     padding: 0;
     box-sizing: border-box;
     margin:0;
-    background: #080808;
-    
+    background: #e9e9e9; 
+    ;  
 }
 `;

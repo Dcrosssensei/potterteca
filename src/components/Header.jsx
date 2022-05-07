@@ -14,6 +14,7 @@ import {
   HUFFLEPUFF,
 } from "../redux/PotterSlice";
 import { selectHouse, selectMascot } from "../redux/PotterSlice";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const house = useSelector(selectHouse);
@@ -22,10 +23,13 @@ const Header = () => {
 
   return (
     <BarColor className="header">
-      <div className="header__container1">
-        <Title>{house}</Title>
-        <img src={mascot} alt="" />
-      </div>
+      <Link to="/" className="--links">
+        <div className="header__container1">
+          <Title>{house}</Title>
+          <img src={mascot} alt="" />
+        </div>
+      </Link>
+
       <div className="header__container2">
         <img
           onClick={() => dispatch(GRYFFINDOR())}

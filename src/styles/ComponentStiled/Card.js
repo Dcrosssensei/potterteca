@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 export const Cards = styled.div`
-  display: flex;
-  flex-direction: column;
-  border: groove 7px ${(props) => props.theme.colorbg2};
-  //   background: ${(props) => props.theme.colorbg1};
+  // border: groove 7px ${(props) => props.theme.colorbg2};
+  background: linear-gradient(
+    90deg,
+    ${(props) => props.theme.colorbg2} 0%,
+    rgba(19, 113, 177, 0) 100%
+  );
 `;

@@ -23,6 +23,10 @@
   [class="Character"] {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  [class="Spell"] {
+    grid-template-columns: auto;
+  }
 }
 
 //mobile
@@ -31,6 +35,10 @@
     grid-template-columns: repeat(4, 1fr);
     margin: 0;
   }
+  [class="header__container2"] {
+    display: none;
+  }
+
   [class="Character"] {
     grid-template-columns: auto;
   }
@@ -38,6 +46,23 @@
   [class="MenuCard"] {
     flex-direction: column;
   }
+
+  [class="MenuCard__Card"] {
+    flex-direction: column;
+    &:hover {
+      box-shadow: 0px 0px 5px black;
+
+      .loadMenu {
+        width: 50%;
+        left: 25%;
+        top: 68%;
+        height: 45px;
+        position: absolute;
+        transition: 1s;
+      }
+    }
+  }
+
   [class="details"] {
     grid-template-columns: auto;
   }
