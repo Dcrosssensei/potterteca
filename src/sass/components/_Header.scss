@@ -2,7 +2,7 @@
   height: 50px;
   font-family: "Bilbo Swash Caps", cursive;
   display: grid;
-  grid-template-columns: repeat(2, minmax(150px, 1fr));
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
   z-index: 10;
 }
 
@@ -11,11 +11,11 @@
   flex: 1;
   h1 {
     position: relative;
-    left: 10vw;
+    left: 7vw;
   }
   img {
     position: relative;
-    left: 8vw;
+    left: 7vw;
     height: 50px;
     object-fit: cover;
   }
@@ -36,4 +36,18 @@
       top: 5px;
     }
   }
+}
+
+.Menu {
+  display: flex;
+  gap: 20px;
+
+  &:hover .Menu__header:not(:hover) {
+    color: #272726;
+  }
+}
+
+.Menu__header {
+  font-size: 35px;
+  color: white;
 }

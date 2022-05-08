@@ -16,6 +16,7 @@ import Characters from "./pages/Characters";
 import Spells from "./pages/Spells";
 import Header from "./components/Header";
 import Modal from "./components/Modal";
+import AboutMe from "./pages/AboutME";
 
 function App() {
   //state house
@@ -31,7 +32,8 @@ function App() {
             <Route path="/books" element={<Books />} />
             <Route path="/characters" element={<Characters />} />
             <Route path="/spells" element={<Spells />} />
-            <Route path="/" element={<Home />} />
+            <Route path="/aboutme" element={<AboutMe />} />
+            <Route path="/*" element={<Home />} />
           </Routes>
         </Layout>
       </HouseTheme>
