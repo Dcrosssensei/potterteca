@@ -16,9 +16,7 @@
 
   img {
     position: relative;
-    // width: 200px;
     aspect-ratio: 16/9;
-    // height: -webkit-fill-available;
     height: 130px;
     object-fit: cover;
     border-radius: 20px;
@@ -29,7 +27,6 @@
     position: relative;
     text-align: center;
     font-size: 45px;
-    left: 20px;
   }
   &:hover {
     cursor: pointer;

@@ -5,6 +5,7 @@ import { TitleColor } from "../styles/ComponentStiled/TitleColor";
 
 import { useDispatch, useSelector } from "react-redux";
 import { SPELL, INFO, CHARACTER, BOOK, selectSpell } from "../redux/dataSlice";
+import Menu from "./Menu";
 
 export const Layout = ({ children }) => {
   const dispatch = useDispatch();
@@ -25,7 +26,7 @@ export const Layout = ({ children }) => {
   return (
     <div className="Layout">
       <TitleColor className="title-name"> Potterteca </TitleColor>
-
+      <Menu></Menu>
       {children}
     </div>
   );

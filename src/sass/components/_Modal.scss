@@ -27,3 +27,15 @@
     }
   }
 }
+
+.modal__menu {
+  display: none;
+  grid-column-start: 1;
+  grid-column-end: 13;
+  position: relative;
+  width: 100%;
+  gap: 2px;
+  // display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

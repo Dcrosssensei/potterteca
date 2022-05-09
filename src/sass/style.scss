@@ -1,4 +1,3 @@
-@import "vars";
 @import "./components/components.scss";
 
 @import url("https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&display=swap");
@@ -35,8 +34,12 @@
     grid-template-columns: repeat(4, 1fr);
     margin: 0;
   }
+
   [class="header__container2"] {
     display: none;
+  }
+  [class*="modal__menu"] {
+    display: flex;
   }
 
   [class="Character"] {

@@ -13,6 +13,7 @@
   font-size: 80px;
   margin: 0;
   left: 8%;
+  top: 10%;
 }
 
 .modal {
@@ -42,6 +43,17 @@
 }
 .modal button::before {
   content: "X";
+}
+
+.modal__menu {
+  display: none;
+  grid-column-start: 1;
+  grid-column-end: 13;
+  position: relative;
+  width: 100%;
+  gap: 2px;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .home {
@@ -323,7 +335,6 @@
   position: relative;
   text-align: center;
   font-size: 45px;
-  left: 20px;
 }
 .MenuCard__Card:hover {
   cursor: pointer;
@@ -393,6 +404,10 @@
 
   [class=header__container2] {
     display: none;
+  }
+
+  [class*=modal__menu] {
+    display: flex;
   }
 
   [class=Character] {
